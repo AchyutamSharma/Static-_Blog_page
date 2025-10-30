@@ -61,8 +61,9 @@ app.post("/update/:index",(req,res)=>{
   res.redirect("/");
 });
 
-
-app.listen(port, ()=>{
-  console.log(`Listening on port ${port}`);  
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
+
 
